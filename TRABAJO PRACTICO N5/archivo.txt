@@ -1,0 +1,2 @@
+Hola, este es un archivo de texto creado con un Blob en React.
+Trabajo Práctico N°5 - Lenguaje IV - 2026.

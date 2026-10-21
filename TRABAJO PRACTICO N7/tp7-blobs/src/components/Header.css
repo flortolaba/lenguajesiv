@@ -1,0 +1,95 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--borde);
+}
+
+.header-contenido {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--texto);
+}
+
+.marca-icono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: var(--acento);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.marca-texto {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.logo-punto {
+  color: var(--verde);
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 26px;
+}
+
+.nav a {
+  position: relative;
+  font-size: 14px;
+  color: var(--texto-suave);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: var(--verde);
+  transition: width 0.2s ease;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: var(--texto);
+}
+
+.nav a:hover::after,
+.nav a.active::after {
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  .header-contenido {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav {
+    justify-content: center;
+    gap: 16px;
+  }
+}

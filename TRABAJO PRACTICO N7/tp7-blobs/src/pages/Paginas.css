@@ -1,0 +1,135 @@
+.pagina-texto {
+  width: 100%;
+  max-width: 720px;
+  align-self: flex-start;
+}
+
+.pagina-texto.centrado {
+  text-align: center;
+  padding-top: 40px;
+}
+
+.pagina-texto .etiqueta {
+  margin: 0 0 8px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+}
+
+.pagina-texto h1 {
+  margin: 0 0 16px;
+  font-size: 34px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.lead {
+  margin: 0 0 28px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--texto-suave);
+}
+
+.boton-enlace {
+  display: inline-block;
+  padding: 11px 22px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background: var(--acento);
+  border: none;
+  border-radius: 999px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.boton-enlace:hover {
+  background: #000;
+  transform: translateY(-1px);
+}
+
+.grilla-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.mini-tarjeta {
+  padding: 22px;
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
+}
+
+.mini-tarjeta h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.mini-tarjeta p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--texto-suave);
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 28px;
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+}
+
+.formulario label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.formulario input,
+.formulario textarea {
+  padding: 11px 14px;
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--texto);
+  background: var(--fondo);
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.2s ease;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  border-color: var(--texto);
+}
+
+.formulario .boton-enlace {
+  align-self: flex-start;
+}
+
+.exito {
+  margin: 0;
+  font-size: 14px;
+  color: #1f9d45;
+}
+
+@media (max-width: 700px) {
+  .grilla-tarjetas {
+    grid-template-columns: 1fr;
+  }
+  .pagina-texto h1 {
+    font-size: 28px;
+  }
+}

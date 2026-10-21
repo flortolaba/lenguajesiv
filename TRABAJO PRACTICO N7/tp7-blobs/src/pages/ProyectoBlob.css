@@ -1,0 +1,160 @@
+.tarjeta {
+  width: 100%;
+  max-width: 560px;
+  align-self: flex-start;
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: 20px;
+  padding: 40px 36px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+}
+
+.etiqueta {
+  margin: 0 0 8px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+}
+
+.tarjeta h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.subtitulo {
+  margin: 8px 0 28px;
+  font-size: 15px;
+  color: var(--texto-suave);
+}
+
+.botones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  color: var(--texto);
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn:hover:not(:disabled) {
+  border-color: var(--texto);
+  transform: translateY(-1px);
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn-principal {
+  background: var(--acento);
+  color: #fff;
+  border-color: var(--acento);
+}
+
+.btn-principal:hover:not(:disabled) {
+  background: #000;
+  border-color: #000;
+}
+
+.numero {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  font-size: 11px;
+  border-radius: 50%;
+  background: rgba(128, 128, 128, 0.15);
+}
+
+.btn-principal .numero {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.estado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 32px;
+  font-size: 14px;
+  color: var(--texto-suave);
+}
+
+.estado p {
+  margin: 0;
+}
+
+.punto {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--borde);
+  transition: background 0.3s ease;
+}
+
+.punto.activo {
+  background: var(--verde);
+}
+
+.resultado {
+  margin-top: 20px;
+  padding: 16px;
+  text-align: left;
+  background: var(--fondo);
+  border-radius: 12px;
+  animation: aparecer 0.3s ease;
+}
+
+.resultado-titulo {
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+}
+
+.resultado pre {
+  margin: 8px 0 0;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 15px;
+  white-space: pre-wrap;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 560px) {
+  .tarjeta {
+    padding: 28px 20px;
+  }
+  .tarjeta h1 {
+    font-size: 24px;
+  }
+}
